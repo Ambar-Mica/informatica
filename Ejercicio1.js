@@ -1,5 +1,12 @@
-let btn= document.getElementById("boton");
-let parrafo= document.getElementById("texto");
-btn.addEventListener("click"),function() {
-parrafo.innerHTML="De Luca";
+let contador = 10;
+let boton = document.getElementById("btndisminuir");
+let numero = document.getElementById("conteo");
+
+boton.addEventListener("click", function(){
+    if (contador > 0) {
+        contador--;
+        numero.rextContent = contador;
+    } else {
+        alert("El contador ya está en ceero. No se puede disminuir más.");
+    }
 });
