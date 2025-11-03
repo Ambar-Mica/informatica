@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar tamaño del texto</title>
+</head>
+<body>
+    <h1>Ejercicio: Cambiar tamaño del texto</h1>
+    <p id="texto">Este texto cambiará de tamaño.</p>
+    <button id="btnAumentar">Aumentar</button>
+    <button id="btnDisminuir">Disminuir</button>
+
+    <script src="./tamanio_texto.js"></script>
+</body>
+</html>
+
+JS (tamanio_texto.js)
+
+let tamanio = 16;
+const texto = document.getElementById("texto");
+const btnAumentar = document.getElementById("btnAumentar");
+const btnDisminuir = document.getElementById("btnDisminuir");
+
+btnAumentar.addEventListener("click", function() {
+    tamanio += 2;
+    texto.style.fontSize = tamanio + "px";
+});
+
+btnDisminuir.addEventListener("click", function() {
+    if (tamanio > 8) {
+        tamanio -= 2;
+        texto.style.fontSize = tamanio + "px";
+    }
+});
